@@ -1,34 +1,59 @@
-# 🧠 Machine Learning & Neural Networks: Classification and Regression
+# ML & From-Scratch Neural Networks
 
-This repository contains an educational exploration of predictive algorithms, featuring both traditional Machine Learning models and Multilayer Perceptrons (MLPs) built entirely from scratch using Python and `numpy`. 
+A comprehensive exploration of Machine Learning and Deep Learning architectures applied to regression and classification tasks.
 
-The project is designed to demonstrate the fundamental inner workings of these algorithms, including forward propagation, backpropagation, and hyperparameter tuning. To show how different architectures adapt to different types of problems, the repository is divided into **four separate reports**:
+## Project Overview
 
-1. **Neural Network Classification:** An MLP built from scratch to recognize MNIST handwritten digits.
-2. **Neural Network Regression:** A modified from-scratch MLP designed to estimate California Housing prices.
-3. **Machine Learning Classification:** Implementation and tuning of standard ML algorithms on categorical data, evaluated on the same handwritten digits dataset.
-4. **Machine Learning Regression:** Implementation and tuning of ensemble and distance-based ML algorithms (Random Forest, Gradient Boosting, KNN, SVR), benchmarked on the same California Housing dataset.
-   
-## 🚀 Features
-* **Built from Scratch:** Core neural network math and logic (Stochastic Gradient Descent, Backpropagation) are implemented using only `numpy`, without relying on heavy frameworks like TensorFlow or PyTorch.
-* **Hyperparameter Isolation & Analysis:** Systematically isolates individual model parameters (e.g., tree depth, penalty budgets, number of neighbors) to visualize their direct impact on model capacity and the bias-variance tradeoff.
-* **Standard ML Pipelines:** Clean, structured implementations of industry-standard algorithms using `scikit-learn`, complete with Grid Search cross-validation.
-* **Feature Engineering:** Demonstrates how to resolve real-world data biases through normalization and ratio creation.
-* **Data Logging & Visualization:** Built-in hooks for exporting training progress, parameter testing, and accuracy metrics to CSV files for plotting and analysis.
+The repository is structured into two primary sub-problems, each addressed using both traditional ML algorithms and custom Neural Networks.
 
-## 📂 Project Structure
-* `classification_network.ipynb` - The core Neural Network built from scratch tailored for classification tasks.
-* `housing_network.ipynb` - The modified Neural Network from scratch adapted for continuous value prediction.
-* `ML_Classification.ipynb` - Exploration and tuning of standard ML algorithms for classification.
-* `ML_Regression.ipynb` - Exploration and tuning of standard ML algorithms for regression (California Housing).
-* `data_loader.py` / `network.py` - Utility scripts for generating data, loading datasets (like MNIST), and core math functions.
-* `*.csv` files - Logged experiment results for train/test performance across all models.
+### 1. California Housing Price Prediction (Regression)
+An analytical approach to predicting real estate prices in California. 
+* **Methodology:** Extensive feature engineering (e.g., population density, rooms-per-household ratios) followed by model optimization.
+* **Algorithms:** Random Forest, Gradient Boosting Regressor (GBR), K-Nearest Neighbors (KNN), and Support Vector Regression (SVR).
+* **Hyperparameter Tuning:** Systematic analysis of parameters such as `n_estimators`, `max_depth`, and `learning_rate` to optimize the bias-variance tradeoff.
+* **Deep Learning:** A custom regression neural network implemented to capture non-linear relationships in tabular housing data.
 
-## 🛠️ Prerequisites
-To run this project, you need Python 3 installed along with the following libraries:
-* `numpy`
-* `pandas`
-* `scikit-learn`
-* `matplotlib`
-* `seaborn`
-* `folium` (for map visualizations)
+### 2. MNIST Digit Classification (Classification)
+The classic "Hello World" of computer vision, solved through multiple lenses.
+* **Traditional ML:** Comparison of various classification algorithms on high-dimensional pixel data.
+* **Custom Neural Network:** A multi-layer perceptron (MLP) built strictly from scratch using NumPy. This implementation includes:
+    * Forward and backpropagation logic.
+    * Stochastic Gradient Descent (SGD).
+    * Custom weight initialization and activation functions.
+
+---
+
+## Repository Structure & Key Notebooks
+
+### Regression (California Housing)
+* **Machine Learning Analysis:** [`ML_Regression/ML_Regression.ipynb`](./ML_Regression/ML_Regression.ipynb)  
+    *Detailed GridSearch analysis and comparison of tree-based vs. kernel-based models.*
+* **Neural Network Implementation:** [`Regresyjny/housing_network.ipynb`](./Regresyjny/housing_network.ipynb)  
+    *The custom-built architecture for continuous value prediction.*
+
+### Classification (MNIST)
+* **Machine Learning Analysis:** [`ML_Classification/Ml_Classification.ipynb`](./ML_Classification/Ml_Classification.ipynb)  
+    *Classification benchmarks and pixel-data scaling experiments.*
+* **Neural Network Implementation:** [`Klasyfikacyjny/classification_network.ipynb`](./Klasyfikacyjny/classification_network.ipynb)  
+    *Step-by-step demonstration of the from-scratch network performance.*
+
+### Results & Summary
+* **Final Comparison & Executive Summary:** [Placeholder for summary_results.ipynb]  
+    *A consolidated view of performance metrics across all models.*
+
+---
+
+## Technical Details: Neural Networks from Scratch
+
+A core highlight of this project is the **avoidance of black-box libraries** (TensorFlow, PyTorch, Keras) for the deep learning component. 
+
+* **Matrix Calculus:** Direct implementation of partial derivatives for error minimization.
+* **Optimization:** Manual implementation of weight updates via Gradient Descent.
+
+---
+
+## How to Run
+
+1.  Clone the repository.
+2.  Install dependencies: `pip install pandas numpy matplotlib seaborn scikit-learn`.
+3.  Open any of the notebooks in the folders above to view the analysis and training steps.
