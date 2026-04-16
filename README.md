@@ -38,7 +38,7 @@ The classic "Hello World" of computer vision, solved through multiple lenses.
     *Step-by-step demonstration of the from-scratch network performance.*
 
 ### Results & Summary
-* **Final Comparison & Executive Summary:** [Placeholder for summary_results.ipynb]  
+* **Final Comparison & Executive Summary:** [`Summary_results`](summary.ipynb) \
     *A consolidated view of performance metrics across all models.*
 
 ---
