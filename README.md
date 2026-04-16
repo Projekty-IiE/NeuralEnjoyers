@@ -52,14 +52,6 @@ A core highlight of this project is the **avoidance of black-box libraries** (Te
 
 ---
 
-## How to Run
-
-1.  Clone the repository.
-2.  Install dependencies: `pip install pandas numpy matplotlib seaborn scikit-learn`.
-3.  Open any of the notebooks in the folders above to view the analysis and training steps.
-
----
-
 <p align="center">
   <b>Elements of Artificial Intelligence</b><br>
   AGH 2026
