@@ -18,7 +18,7 @@ The classic "Hello World" of computer vision, solved through multiple lenses.
 * **Traditional ML:** Comparison of various classification algorithms on high-dimensional pixel data.
 * **Custom Neural Network:** A multi-layer perceptron (MLP) built strictly from scratch using NumPy. This implementation includes:
     * Forward and backpropagation logic.
-    * Stochastic Gradient Descent (SGD).
+    * Mini-Batch Stochastic Gradient Descent (SGD).
     * Custom weight initialization and activation functions.
 
 ---
@@ -47,16 +47,10 @@ The classic "Hello World" of computer vision, solved through multiple lenses.
 
 A core highlight of this project is the **avoidance of black-box libraries** (TensorFlow, PyTorch, Keras) for the deep learning component. 
 
-* **Matrix Calculus:** Direct implementation of partial derivatives for error minimization.
-* **Optimization:** Manual implementation of weight updates via Gradient Descent.
-
----
-
-## How to Run
-
-1.  Clone the repository.
-2.  Install dependencies: `pip install pandas numpy matplotlib seaborn scikit-learn`.
-3.  Open any of the notebooks in the folders above to view the analysis and training steps.
+* **Backpropagation & Matrix Calculus:** Direct implementation of partial derivatives to compute error gradients layer-by-layer.
+* **Custom Optimization:** Manual implementation of weight and bias updates via Mini-Batch SGD.
+* **Alternative Cost Function:** Replacement of the standard quadratic cost with the **Cross-Entropy cost function** to mathematically prevent learning stagnation.
+* **Regularization & Initialization:** Implementation of **L2 Regularization (Weight Decay)** to explicitly combat overfitting, alongside an optimized **Weight Initialization** strategy (scaling initial weights by the square root of input connections) to prevent vanishing/exploding gradients.
 
 ---
 
